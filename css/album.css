@@ -1,0 +1,51 @@
+.album-container {
+ max-width: 800px;
+ margin: 2rem auto;
+ padding: 1rem;
+}
+
+.album-info {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.album-capa {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.album-info h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.album-buttons .btn {
+    margin-right: 1rem;
+    padding: 0.5rem;
+    background-color: black;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.faixas li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1ps solid #333;
+}
+
+.btn-play {
+    background-color: transparent;
+    color: rgb(128, 128, 128) ;
+    font-size: 1rem;
+    border: 1px solid rgb(128, 128, 128);
+    border-radius: 5px;
+    cursor: pointer;
+}
