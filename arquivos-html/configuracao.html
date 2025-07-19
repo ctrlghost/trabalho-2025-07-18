@@ -9,28 +9,32 @@
     
 </head>
 <body>
-    <a href=""></a>
-    
+    <header>
     <h1>Configurações</h1>
+    </header>
 
-    <section>
+    <main>
+
+    <section class="config-section">
         <h2>Informações da Conta</h2>
-        <Label>Nome
-            <input type="text" value="Usuário um"/>
-        </Label>
+        
+        <label>Nome
+            <input type="text" id="name" value="Usuário um"/>
+        </label>
         <br>
-
-        <label>E-mail
+    
+        <label for="e-mail">E-mail</label>
             <input type="email" value="anderson@gmail.com" />
         </label>
         <br>
         
-        <label>Assinatura
-            <select>
-                <option>Grátis<option>
-                <option selected>Premium</option>
-                </select>
+        <label for="assinatura">Assinatura</label>
+            <select id="assinatura">
+                <option value="gratis">Grátis</option>
+                <option value="premium" selected>Premium</option>
+            </select>
         </label>
+        <br>
     </section>
 
     <section>
