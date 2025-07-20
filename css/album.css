@@ -1,55 +1,73 @@
 .album-container {
- max-width: 800px;
- margin: 2rem auto;
- padding: 1rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  color: var(--texto);
 }
 
 .album-info {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-    margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .album-capa {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.album-info div {
+  flex: 1;
 }
 
 .album-info h2 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
-.album-buttons .btn {
-    margin-right: 1rem;
-    padding: 0.5rem;
-    background-color: rgb(128, 128, 128);
-    border: none;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
+.album-info p {
+  font-size: 1rem;
+  color: var(--texto-sec);
+  margin-bottom: 1rem;
+}
+
+.album-buttons .btnsalvar,
+.album-buttons .btncompartilhar {
+  background-color: var(--tema);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.faixas {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .faixas li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.8rem 0;
-    border-bottom: 1ps solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #333;
+}
+
+.faixas li span {
+  flex: 1;
 }
 
 .btn-play {
-    background-color: transparent;
-    color: rgb(128, 128, 128) ;
-    font-size: 1rem;
-    border: 1px solid rgb(128, 128, 128);
-    border-radius: 5px;
-    cursor: pointer;
+  background: none;
+  border: 1px solid var(--tema);
+  color: var(--tema);
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
 }
-
-
-
-

@@ -1,6 +1,71 @@
 .artista-container {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 3px;
-    text-align: center;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.artista-capa {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 1.5rem;
+}
+
+.btnseguir {
+  background-color: var(--tema);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.sessao-populares,
+.sessao-albuns,
+.sessao-playlists,
+.sessao-biografia {
+  margin-bottom: 2rem;
+}
+
+.sessao-populares h2,
+.sessao-albuns h2,
+.sessao-playlists h2,
+.sessao-biografia h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--cor-texto);
+}
+
+.sessao-populares ul,
+.sessao-albuns ul,
+.sessao-playlists ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sessao-populares ul li,
+.sessao-albuns ul li,
+.sessao-playlists ul li {
+  margin: 0.5rem 0;
+  color: var(--cor-texto-sec);
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.sessao-populares ul li:hover,
+.sessao-albuns ul li:hover,
+.sessao-playlists ul li:hover {
+  color: red;
+}
+
+.sessao-biografia p {
+  color: var(--cor-texto-sec);
+  line-height: 1.6;
+  margin: 0.5rem 0;
+  text-align: left;
 }

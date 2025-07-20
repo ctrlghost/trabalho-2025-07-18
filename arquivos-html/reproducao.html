@@ -3,29 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/imports.css">
     <title>Reprodução - SONIQUE</title>
 </head>
 <body>
-    
-    <div>
-        <img src="img de capa dps aqui.." alt="Capa da Música">
+    <a href="album.html" class="btn-play">voltar</a>
+    <audio id="audio" src="../assets/img/audio/Faint (Official Music Video) [4K UPGRADE] – Linkin Park.mp3"></audio>
 
-        <div>
-            <H2>Nome da Música</H2>
-            <p>Artista</p>
+    <div class="reprodutor">
+        <img src="../assets/img/capa link park.jfif" alt="Capa da Música" class="capa">
+
+        <div class="informacoes">
+            <H2>Faint</H2>
+            <p>Link Park</p>
         </div>
 
-        <div>
-            <button>⏮</button>
-            <button>▶</button>
-            <button>⏭</button>
+        <div class="controles">
+            <button class="botao voltar">⏮</button>
+            <button class="botao botao-play">▶</button>
+            <button class="botao">⏭</button>
         </div>
 
-        <div>
-            <span>0:00</span>
-            <div class="progresso"><div class="progresso-prenchido"></div></div> <!--dps ajustar pra organizar as classes-->
-            <span>3:45</span>
+        <div class="progresso">
+            <span class="tempo tempo esquerda">0:00</span>
+            <div class="barra">
+                <div class="preenchimento"></div>
+            </div>
+            <span class="tempo tempo-direita">3:45</span>
         </div>
     </div>
+
+    <script>
+const audio = document.getElementById("audio");
+const btnPlay = document.querySelector(".botao-play");
+const preench = document.querySelector(".preenchimento");
+const tempoEsq = document.querySelector(".tempo-esquerda");
+const tempoDir = document.querySelector(".tempo-direita");
+
+function formatar(ts) {
+  const m = Math.floor(ts / 60) || 0;
+  const s = String(Math.floor(ts % 60)).padStart(2, "0");
+  return `${m}:${s}`;
+}
+
+btnPlay.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play();
+    btnPlay.textContent = "⏸";
+  } else {
+    audio.pause();
+    btnPlay.textContent = "▶";
+  }
+});
+
+audio.addEventListener("loadedmetadata", () => {
+  tempoDir.textContent = formatar(audio.duration);
+});
+
+audio.addEventListener("timeupdate", () => {
+  const pct = (audio.currentTime / audio.duration) * 100;
+  preench.style.width = pct + "%";
+  tempoEsq.textContent = formatar(audio.currentTime);
+});
+</script>
+
 </body>
 </html>
