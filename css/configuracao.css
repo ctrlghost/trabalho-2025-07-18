@@ -1,0 +1,95 @@
+body{
+    background-color: #121212;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body.tema-claro{
+    background-color: #f2f2f2;
+    color: #121212;
+}
+
+body.tema-claro .config-box{
+    background-color: #fff;
+}
+
+body.tema-claro input[type="text"],
+body.tema-claro input[type="email"],
+body.tema-claro select{
+    background-color: #eeee;
+    color: #121212;
+}
+
+body.tema-escuro{
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.tema-escuro .config-box{
+    background-color: #1e1e1e;
+}
+
+body.tema-escuro input[type="text"]
+body.tema-escuro input[type="email"],
+body.tema-escuro select{
+    background-color: #2c2c2c;
+    color: #ffffff;
+}
+
+h1{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h2{
+    font-size: 1.3rem;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4b4a4a;
+    color: white;
+}
+
+.config-box{
+    background-color: #7c1a1a77;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding-left: 0;
+    padding-right: 0;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+label{
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.checkbox-group label{
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+}
+
+section + section{
+    margin-top: 30px;
+}

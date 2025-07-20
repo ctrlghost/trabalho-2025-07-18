@@ -5,27 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Configurações</title>
 
-    <link rel="stylesheet" href="../CSS/imports.css"/>
+    <link rel="stylesheet" href="../css/configuracao.css"/>
     
 </head>
 <body>
+
+    <a href="home.html" class="btn-play">Home</a>
     <header>
     <h1>Configurações</h1>
     </header>
 
     <main>
-
-    <section class="config-section">
+        <section class="config-box">
         <h2>Informações da Conta</h2>
         
-        <label>Nome
+        <label for="name">Nome</label>
             <input type="text" id="name" value="Usuário um"/>
-        </label>
+        
         <br>
     
-        <label for="e-mail">E-mail</label>
-            <input type="email" value="anderson@gmail.com" />
-        </label>
+        <label for="email">E-mail</label>
+            <input type="email" id="email" value="anderson@gmail.com" />
         <br>
         
         <label for="assinatura">Assinatura</label>
@@ -33,20 +33,21 @@
                 <option value="gratis">Grátis</option>
                 <option value="premium" selected>Premium</option>
             </select>
-        </label>
+        </section>
         <br>
-    </section>
+
 
     <section>
-        <section>
+
+        <section class="config-box">
         <h2>Preferências de Reprodução</h2>
-        <label>Qualidade de Som
-         <select>
+
+        <label for="qualdiade">Qualidade de Som</label>
+         <select id="qualdiade">
          <option>Baixa</option>
          <option Select>Média</option>
          <option>Alta</option>
-         </select>
-        </label>
+         </select> 
         <br>
         
         <label>
@@ -55,18 +56,22 @@
     </section>
     <br>
 
-    <section>
+    <section class="config-box">
         <h2>Notificações</h2>
+
         <label>
          <input type="checkbox" checked/> Receber informações por e-mail
+         </label>
     <br>
 
-    <label> <input="checkbox"/>Receber notificações por push
+    <label>
+        <input type="checkbox"/>Receber notificações por push
     </label>
     </section>
 
-    <section>
+    <section class="config-box">
         <h2>Idioma</h2>
+
         <select>
             <option selected>Português</option>
             <option>Inglês</option>
@@ -74,10 +79,20 @@
         </select>
     </section>
 
-    <section>
+    <section class="config-box">
         <h2>Tema</h2>
-        <label><input type="radio" name="tema" checked /> Claro</label>
-        <label><input type="radio" name="tema" checked /> Escuro</label>
+
+        <div class="container">
+            <input type="radio" name="tema" id="claro" hidden>
+            <input type="radio" name="tema" id="escuro" hidden checked>
+
+            <label for="claro"><input type="radio" name="tema" hidden /> Claro</label>
+        <label for="escuro"><input type="radio" name="tema" hidden /> Escuro</label>
+
+        <label><input type="radio" name="tema" value="claro" id="tema-claro" checked /> Claro</label>
+        <label><input type="radio" name="tema" value="escuro" id="tema-escuro" checked /> Escuro</label>
+        </div>
+    </section>
         
 </body>
 </html>
